@@ -1,0 +1,50 @@
+:root {
+    --width: 900px;
+    --height: 500px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    background-color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: var(--width);
+    height: var(--height);
+    border: 2px solid #aaaaaa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 2000px;
+    perspective-origin:  left;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: #aaaaaa;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+    transform-style: preserve-3d;
+    transform-origin: 0px;
+    transform: rotateY(90deg);
+
+}
+
+.item:hover {
+    transform: rotateY(180deg);
+}
